@@ -1,34 +1,266 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, inintal-scale=1.0">
-        <title>王晓平的博客</title>
-        <style media="screen">
-        body
-            {
-                background-color: #aee;
-    
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="script.js">
+    </script>
+    <style media="screen">
+        body{
+            margin: 0;
+            padding: 0;
+            z-index: 0;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        }
+        *{box-sizing: border-box}
+        .class1{
+           
+            padding: 24px;
+            height: 745px;
+            width: 25%;
+            position: fixed;
+            background: url(./2.png);
+            z-index: 1;
+            transform: 1s;
+        }
+
+        .class5 .class3{
+            display: none;
+            position: absolute;
+            top: 120px;
+            right: 0%;
+            width:100%;
+            height: 145px;
+            background-color: rgb(245, 232, 216);
+        }
+        .class5:hover .class3{
+            display: block;
+        }
+        .class5:hover{
+            height:185px;
+        } 
+        img.a{
+            display: block;
+            margin:0px 0px 0px 24px ;
             }
-            p{font-size:24px}
-            h1{color:crimson}
-            div{background-color: chocolate;
-            height: 150px;
-            padding: 20px;
-            border: 30px solid lightblue;
-            margin:30px;
-            }
-        </style>
-    </head>
-    <body>
-        <h1 align="center">信号与系统</h1>
-            <div>
-            <p>
-                信号与系统是大学本科层次电子信息类的专业课，本课程是计算机科学与技术、信息与通信工程、电子科学与技术、光学工程、仪器科学与技术、电气工程、控制科学与工程、测绘科学与技术等国家一级学科在大学本科阶段的专业必修课。
-            </p>
+        .class2{
+            width: 74%;
+            position: absolute;
+            right: 0;
+            background-repeat: repeat;
+            background-image: url(./1234.jpg);
+            height: 5000px;
+        }
+        .class4{
+            width: 1%;
+            height: 100%;
+            position: fixed;
+            left: 25%;
+            animation: example 4s infinite alternate ;
+            display: block;
+            z-index: -1;
+        }
+        @keyframes example{
+            0%{background-color: aliceblue}
+            10%{background-color: rgb(165, 149, 58)}
+            20%{background-color: rgba(167, 110, 37, 0.863)}
+            30%{background-color:rgb(23, 124, 57);}
+            40%{background-color: rgb(211, 112, 178)}
+            70%{background-color: rgb(158, 108, 47)}
+            90%{background-color: rgba(45, 142, 221, 0.534)}
+            100%{background-color: rgb(216, 75, 75)}
+        }
+        .class5{
+            top:0%;
+            height: 50px;
+
+        }
+        .class6{
+            top:60px;
+            border: 2px solid red;
+            position: relative;
+        }
+        li.dropdown a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }/*导航栏格式*/
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #bdabab;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+        <link rel="icon" href=""> 
+    <div class="class1">
+        <img class="a" src="./书.jpg" alt="书"><br>
+        <ul >
+            <li><a href="https://www.bilibili.com/video/av26677956?from=search&seid=2652480629259292250" target="_blank">信号与系统</a></li>
+            <li>目录</li>
+                <ul>
+                <li>信号与系统的基本概念</li><li>LTI系统的时域分析</li><li>连续时间信号与系统的频域分析</li><li>离散时间信号与系统的频域分析</li>
+            <li>采样与调制</li><li>信号与系统的复频域分析</li><li>Z变换</li><li>系统理论</li><li>状态变量分析</li></ul>
+        </ul>
+    </div>
+    <div>
+        <div class="class4"> 
+        </div>
+        <div class="class2">
+            <div class="class5">
+                <h1 align="center" >浙江大学宁波理工学院</h1>
+                <p align="right">信号与系统大作业汇报页面</p>
+                <div class="class3">
+                        <ul>任课老师:王一刚
+                            <li>小组成员:
+                                <li>吕成浩（Python制作兼组长</li>
+                                <li>郁梦龙（Markdown制作)</li>
+                                <li>王晓平（HTML制作）</li>
+                            </li>
+                        </ul>   
+                    </div>
             </div>
-        <img src="./22.jpg" alt="书">
-        <a href="https://github.com/" target="_blank">GITHUB主页</a>
-        <a href="#">信号与系统大作业</a>
-    </body>
+            <div class="class6">
+                                <a id="a" href="javascript:void(0)" class="dropbtn" onclick="showList(this)">python代码</a>
+                                <div class="dropdown-content" id="dropdown-a">
+                                    <p>import matplotlib.pyplot as plt<br>
+                                        import numpy as np<br>
+                                        x0=-1<br>
+                                        x1=np.pi<br>
+                                        ω=np.pi<br>
+                                        t0=1<br>
+                                        #ω=π x1(t)=sin(ωt)u(t)<br>
+                                        x=np.linspace(x0,x1,1000)<br>
+                                        k=np.linspace(x0,x1,1000)<br>
+                                        y=np.cos(ω*x)<br>
+                                        plt.figure('函数图像')<br>
+                                        plt.title("$x1(t)=cos(ωt)u(t)$")<br>
+                                        plt.plot(x,y)<br>
+                                        plt.xlabel('t')<br>
+                                        plt.ylabel('x1(t)=cos(ωt)u(t)')<br>
+                                        # gca ='get current axis'<br>
+                                        ax = plt.gca()<br><br>
+                                        
+                                        
+                                        import numpy as np<br>
+                                        import matplotlib.pyplot as plt<br>
+                                        import mpl_toolkits.axisartist as axisartist<br>
+                                        import matplotlib.ticker as ticker<br>
+                                        
+                                        x=np.linspace(-5,5,50)<br>
+                                        y1=np.sin(x)<br>
+                                        y2=np.sin(x+1)<br>
+                                        
+                                        fig=plt.figure()<br>
+                                        ax=axisartist.Subplot(fig,211)<br>
+                                        fig.add_axes(ax)<br>
+                                        
+                                        
+                                        
+                                        ax.axis[:].set_visible(False)<br>
+                                        ax.axis["x"] = ax.new_floating_axis(0,0)<br>
+                                        ax.axis["x"].set_axisline_style("->",size=1.0)<br>
+                                        
+                                        ax.axis["y"] = ax.new_floating_axis(1,0)<br>
+                                        ax.axis["y"].set_axisline_style("->",size=1.0)<br>
+                                        ax.axis["y"].set_axis_direction("left")<br>
+                                        ax.xaxis.set_major_locator(ticker.NullLocator())<br>
+                                        ax.yaxis.set_major_locator(ticker.NullLocator())<br>
+                                        ax.set_xlim(-5,5)<br>
+                                        ax.set_ylim(-2,2)<br>
+                                        plt.title('$x[n]$')<br>
+                                        plt.stem(x,y1)<br>
+                                        
+                                        ax=axisartist.Subplot(fig,212)<br>
+                                        fig.add_axes(ax)<br>
+                                        
+                                        ax.axis[:].set_visible(False)<br>
+                                        ax.axis["x"] = ax.new_floating_axis(0,0)<br>
+                                        ax.axis["x"].set_axisline_style("->",size=1.0)<br>
+                                        
+                                        ax.axis["y"] = ax.new_floating_axis(1,0)<br>
+                                        ax.axis["y"].set_axisline_style("->",size=1.0)<br>
+                                        ax.axis["y"].set_axis_direction("left")<br>
+                                        ax.xaxis.set_major_locator(ticker.NullLocator())<br>
+                                        ax.yaxis.set_major_locator(ticker.NullLocator())<br>
+                                        ax.set_xlim(-5,5)<br>
+                                        ax.set_ylim(-2,2)<br>
+                                        plt.title(r'$x[n-n_0]$')<br>
+                                        plt.stem(x,y2)<br><br>
+                                        
+                                        
+                                        import matplotlib.pyplot as plt<br>
+                                        import numpy as np<br>
+                                        import math <br>
+                                        a1=-1<br>
+                                        x=np.linspace(-5,5,50)<br>
+                                        y1=np.exp(a1*x)<br>
+                                        a2=+1<br>
+                                        x=np.linspace(-5,5,50)<br>
+                                        y2=np.exp(a2*x)<br>
+                                        a3=0<br>
+                                        x=np.linspace(-5,5,50)<br>
+                                        y3=np.exp(a3*x)<br>
+                                        plt.figure('指数信号')<br>
+                                        plt.plot(x,y1)<br>
+                                        plt.plot(x,y2)<br>
+                                        plt.plot(x,y3)<br><br>
+                                        
+                                        
+                                        import matplotlib.pyplot as plt<br>
+                                        import numpy as np<br>
+                                        
+                                        def u(t,t0):<br>
+                                            n = 0<br>
+                                            for i in t:<br>
+                                                if(i< t0):<br></t0>
+                                                   t[n] = 0<br>
+                                                   n += 1<br>
+                                                else:<br>
+                                                   t[n] = 1<br>
+                                                   n += 1<br>
+                                            return t<br>
+                                        
+                                        
+                                        x = np.linspace(-100,100,3000)<br>
+                                        ax = plt.gca()<br>
+                                        ax.spines['right'].set_color('none')<br>
+                                        ax.spines['top'].set_color('none')<br>
+                                        ax.xaxis.set_ticks_position('bottom')<br>
+                                        ax.yaxis.set_ticks_position('left')<br>
+                                        ax.spines['bottom'].set_position(('data', 0))<br>
+                                        ax.spines['left'].set_position(('data', 0))<br>
+                                        plt.xlim(-100,100)<br>
+                                        y = u(x, 0)<br>
+                                        x = np.linspace(-100,100,3000)<br>
+                                        plt.title("u(t)")<br>
+                                        plt.plot(x, y)<br>
+                                        plt.show()<br>
+                                        </p>
+                                </div>
+                                <a id="b" href="javascript:void(0)" class="dropbtn" onclick="showList(this)">python图像</a>
+                                <div class="dropdown-content" id="dropdown-b">
+                                    <p>图像</p>
+                                    <img src="./函数4.png" alt="">
+                                    <img src="./函数1 (2).png" alt="">
+                                    <img src="./函数2.png" alt="">
+                                    <img src="./函数1.png" alt="">
+                                </div>
+                        <script src="script.js"></script>
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
 </html>
